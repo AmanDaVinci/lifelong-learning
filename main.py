@@ -8,7 +8,7 @@ def main():
     parser.add_argument("--seed", default=42, type=int)
     parser.add_argument("--dataset_size", default=10000, type=int)
     parser.add_argument("--testset_size", default=1000, type=int)
-    parser.add_argument("--save_as_csv", action="store_false")
+    parser.add_argument("--save_as_csv", action="store_true")
     parser.add_argument(
         "--stream", 
         default="standard", 
@@ -63,9 +63,11 @@ def main():
     print(teststream.summary())
 
     if args.save_as_csv:
-        path = Path("data")
+        path = Path(f"data/{args.stream}")
+        path.mkdir(exist_ok=True, parents=True)
         datastream.save(path/"train")
         teststream.save(path/"test")
+        print(f"{args.stream} stream saved as csv at {path}")
 
 
 if __name__=="__main__":
