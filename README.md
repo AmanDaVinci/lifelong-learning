@@ -54,3 +54,15 @@ The `Datastream` class provides more options to customize the stream.
 The processing steps to encode a task into our Degree-of-Belief framework
 can be found in the `datastreams/transforms.py` source file.
 
+
+## Citation
+
+```bibtex
+@inproceedings{hussain2021towards,
+    title={Towards a robust experimental framework and benchmark for lifelong language learning},
+    author={Aman Hussain and Nithin Holla and Pushkar Mishra and Helen Yannakoudakis and Ekaterina Shutova},
+    booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 1)},
+    year={2021},
+    url={https://openreview.net/forum?id=yJyIjWyPJgs}
+}
+```
